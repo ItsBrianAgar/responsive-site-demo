@@ -12,6 +12,8 @@
     --opac-black: rgba(46, 46, 46, .5);
     --white: #fff;
     --off-white: #F8F8F8;
+
+    --padding-grid: 12rem;
 }
 
 html {
@@ -25,7 +27,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.6rem 12rem;
+    padding: 2.6rem var(--padding-grid);
 }
 
 .navLogo {
@@ -55,11 +57,15 @@ html {
     color: var(--secondary);
 }
 
+.mobileMenuIcon {
+    display: none;
+}
+
 /* HEADER */
 .header {
     position: relative;
     width: 100%;
-    padding: 15rem 12rem;
+    padding: 15rem var(--padding-grid);
     border: 1.6rem solid var(--primary);
 
     background-image: url(images/1.jpg);
@@ -123,7 +129,7 @@ html {
 /* SERVICES */
 
 .services {
-    padding: 16rem 12rem;
+    padding: 16rem var(--padding-grid);
     background-color: var(--off-white);
 }
 
@@ -138,9 +144,13 @@ html {
 .sectionHeading {
     font-weight: 700;
     font-size: 4.8rem;
-    color: var(--secondary);
+    color: var(--black);
     letter-spacing: 1.2px;
     margin-bottom: 1.2rem;
+}
+
+.serviceCardTitleCard > .sectionHeading {
+    color: var(--secondary);
 }
 
 .sectionDesc {
@@ -189,4 +199,293 @@ html {
     color: var(--black);
     letter-spacing: 0.45px;
     line-height: 2.6rem;
+}
+
+/* Testimonials */
+
+.testimonials {
+    padding: 12rem var(--padding-grid) 12.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonalTextbox {
+    max-width: 75rem;
+    text-align: center;
+}
+
+.testName {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--secondary);
+    letter-spacing: 0.6px;
+    margin-bottom: 2rem;
+}
+
+.testParagraph {
+    font-style: italic;
+    font-size: 2.1rem;
+    color: var(--black);
+    letter-spacing: 0.52px;
+    line-height: 3rem;
+}
+
+.testimonialQuotation {
+    font-style: italic;
+    font-size: 6.0rem;
+    color: var(--primary);
+    letter-spacing: 1.49px;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.sectionDivider {
+    opacity: .25;
+    border: 1px solid #979797;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/* .selector:hover {} */
+
+.faq {
+    padding: 12rem var(--padding-grid);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faqQuestions {
+    width: calc(50% - 6rem);
+}
+
+.faqImage {
+    width: calc(50% - 6rem);
+    background-image: url('images/2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+.faqQuestions > .sectionHeading {
+    margin-bottom: 4rem;
+}
+
+.qaContainer:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.qaQuestion {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--black);
+    letter-spacing: 0.6px;
+    margin-bottom: 2rem;
+}
+
+.qaAnswer {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--black);
+    letter-spacing: 0.45px;
+    line-height: 2.6rem;
+}
+
+.qaAnswer > span {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+/* CTA */
+
+.ctaSection {
+    background-color: var(--secondary);
+    padding: 12rem var(--padding-grid);
+    text-align: center;
+}
+
+h3.sectionHeading {
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: var(--white);
+    letter-spacing: 0.9px;
+    margin-bottom: 3.6rem;
+}
+
+.ctaButton {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--black);
+    letter-spacing: 0.45px;
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 2rem 3.6rem 2.2rem;
+    border: none;
+    cursor: pointer
+}
+
+/* FOOTER */
+.footer {
+    padding: 12rem var(--padding-grid);
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+.footerLogo {
+    height: 6rem;
+    margin-bottom: 3.2rem;
+}
+
+.footerListsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footerLinkList {
+    list-style-type: none;
+}
+
+.footerLinkListHead {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--black);
+    letter-spacing: 0.6px;
+    margin-bottom: 1.6rem;
+}
+
+.footerLink {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--black);
+    letter-spacing: 0.45px;
+    text-decoration: none;
+    padding: 1.6rem 0;
+}
+
+.socialLinks {
+    display: flex;
+}
+
+.socialLinks > .footerLink {
+    padding-right: 1.6rem;
+}
+
+.socialLinks > .footerLink > img {
+    
+}
+
+/* Tablet */
+@media only screen and (max-width: 1000px) {
+    * {
+        --padding-grid: 8rem;
+    }
+
+    .nav {
+        /* padding: 2.6rem 8rem; */
+    }
+
+    .header {
+        padding: 12rem --padding-grid;
+    }
+
+    .headingPrimary {
+        width: unset;
+    }
+
+    .headerDesc {
+        width: unset;
+    }
+
+    .services > .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .faqQuestions {
+        width: unset;
+    }
+
+    .faqImage {
+        order: -1;
+        width: 100%;
+        height: 80rem;
+        margin-bottom: 6.4rem;
+    }
+
+    .footerListsContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footerLinkList {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Large Mobile */
+@media only screen and (max-width: 650px) {
+    * {
+        --padding-grid: 4rem;
+    }
+
+    .nav {
+        padding: 2.6rem var(--padding-grid);
+    }
+
+    .header {
+        padding: 4rem var(--padding-grid);
+        border: .8rem solid var(--primary);
+    }
+
+    .headerCTA {
+        width: 100%;
+    }
+
+    .services > .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonialTrigger {
+        display: none;
+    }
+
+    .sectionDivider {
+        width: 66%;
+    }
+}
+
+/* Small Mobile */
+@media only screen and (max-width: 500px) {
+    * {
+        --padding-grid: 2rem;
+    }
+
+    .nav {
+        padding: 1.6rem --padding-grid;
+    }
+
+    .navList {
+        display: none;
+    }
+
+    .mobileMenuIcon {
+        display: block;
+    }
+
+    .faqImage {
+        height: 64rem;
+    }
 }
